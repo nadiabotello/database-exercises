@@ -14,6 +14,12 @@ SELECT genre FROM albums WHERE name = 'Nevermind';
 
 SELECT 'Which albums were released in the 1990s' AS 'Exercise 4';
 
-SELECT release_date FROM albums WHERE release_date >= 1990 and release_date <= 1999;
+SELECT * FROM albums WHERE release_date >= 1990 and release_date <= 1999;
 
 SELECT 'Which albums had less than 20 million certified sales' AS 'Exercise 5';
+
+SELECT * FROM albums WHERE sales < 20;
+
+SELECT 'All the albums with a genre of Rock' AS 'Exercise 6';
+
+SELECT * FROM albums WHERE genre = 'Rock';
