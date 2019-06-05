@@ -89,12 +89,18 @@ where birth_date like '%12-25'
 
 -- refactored for functions exercise
 
-SELECT *, DATEDIFF(now(), hire_date)
+SELECT CONCAT (first_name, ' ', last_name), CONCAT('Working at the co for: ',
+        DATEDIFF(now(), hire_date) / 365,
+    ' years'
+    )
 from employees
 where birth_date like '%12-25'
   AND hire_date like '199%';
 
-
+SELECT *, DATEDIFF(now(), hire_date)
+from employees
+where birth_date like '%12-25'
+  AND hire_date like '199%';
 
 
 select *
