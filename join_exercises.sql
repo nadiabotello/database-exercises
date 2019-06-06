@@ -40,3 +40,10 @@ JOIN dept_manager ON dept_manager.emp_no = employees.emp_no
 JOIN departments ON departments.dept_no = dept_manager.dept_no
 JOIN salaries ON salaries.emp_no = employees.emp_no
 WHERE dept_manager.to_date > curdate() AND salaries.to_date > curdate();
+
+
+-- BONUSES
+-- what is the most common birthday in the company? least common?
+
+SELECT birth_date
+FROM employees

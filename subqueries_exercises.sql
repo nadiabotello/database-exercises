@@ -63,3 +63,19 @@ where emp_no in (
         select max(salary) from salaries
     )
 );
+
+-- what is the most common birthday in the company? least common?
+
+SELECT DISTINCT birth_date, count(*)
+FROM employees
+GROUP BY birth_date
+ORDER BY count(*) DESC
+LIMIT 1;
+
+SELECT DISTINCT birth_date, count(*)
+FROM employees
+GROUP BY birth_date
+ORDER BY count(*) ASC
+LIMIT 1;
+
+
